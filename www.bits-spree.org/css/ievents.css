@@ -1,0 +1,173 @@
+/* reset css */
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+img {
+	text-decoration: none;
+	border: 0;
+}
+.wrap {
+	width: 940px;
+	margin: 0 auto;
+}
+.vertical {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+img {
+	-ms-interpolation-mode: nearest-neighbor;
+
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: crisp-edges;
+}
+html, body {
+	height: 100%;
+}
+/* */
+body{
+	background: #ffffff url("../img/slide1back.jpg") no-repeat fixed center;
+	background-size: cover;
+	overflow: auto;
+}
+#backv{
+	opacity: 0.45;
+}
+.container{
+	text-align: center;	
+}
+.container .row{
+	margin-bottom: 5%;
+}
+.container h1{
+	font-family: 'Cinzel', serif;
+	text-align: center;
+	color: #b25047;
+	margin-top: 2%;
+	margin-bottom: 2%;	
+}
+.container h3{
+	font-family: 'Mada', serif;
+	text-align: center;
+	color: #FFFAD5;
+}
+.container p{
+	font-family: 'Mada', serif;
+	font-size: 1.4em;
+	color: #FFFAD5;
+}
+.container #credits{
+	font-family: 'Cinzel', serif;
+	font-weight: 800;
+	font-size: 2em;
+	color: #b25047;
+}
+.container #credits span{
+	font-family: 'Mada', serif;
+	font-weight: normal;
+	color: #FFFAD5;
+}
+.container .login{
+	color: #a73dc8;
+}
+.container .col-md-12 img{
+	cursor: pointer;
+	width: 80%;
+	height: auto;
+	border-radius: 22px;
+	transition: all 0.2s ease-in-out;
+	filter: sepia(0);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.container .col-md-12 img:hover{
+	filter: sepia(85%);
+}
+.container iframe{
+	border: none;
+	overflow: hidden;
+	border-radius: 12px;
+}
+/*  */
+.toAnimate {
+	visibility:hidden;
+}
+.toAnimate.visible{
+	visibility:visible;
+}
+
+.dot{
+	position: fixed;
+	width: 30px;
+	height: 30px;
+	background: url("../img/basketball.svg");
+}
+/* page loader */
+#loader-wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #192B33;
+	z-index: 9999;
+}
+#loader{
+	position: absolute;
+	left: 44%;
+	top: 40%;
+}
+/* back button */
+.back-button{
+	position: fixed;
+	left: 3%;
+	top: 3%;
+	z-index: 9000;
+}
+.back-button p{
+	font-family: 'Mada', sans-serif;
+}
+.back-button a{
+	text-decoration: none;
+	color: #fffad5;
+	transition: color 0.3s;
+}
+.back-button a:hover{
+	cursor: pointer;
+	color: #261c19;
+}
+
+@media screen and (max-width: 540px){
+	.container .col-md-12 img{
+		width: 90%;
+		height: auto;
+	}
+	.back-button{
+		left: unset;
+		top: unset;
+		right: 3%;
+		bottom: 1%;
+	}
+	.back-button p{
+		font-size: 1em;
+	}
+	#loader{
+		left: 38%;
+		top: 45%;
+	}
+	#loader img{
+		width: 45%;
+	}
+}
